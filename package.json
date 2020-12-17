@@ -1,5 +1,5 @@
 {
-  "name": "pajbank",
+  "name": "smartbilhandlare",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -71,10 +71,10 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sharminmousumi/pajbank.git"
+    "url": "git+https://github.com/sharminmousumi/smartbilhandlare.git"
   },
   "bugs": {
-    "url": "https://github.com/sharminmousumi/pajbank/issues"
+    "url": "https://github.com/sharminmousumi/smartbilhandlare/issues"
   },
-  "homepage": "https://github.com/sharminmousumi/pajbank#readme"
+  "homepage": "https://github.com/sharminmousumi/smartbilhandlare#readme"
 }

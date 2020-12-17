@@ -8,11 +8,11 @@
        <div class="grid-container">
         <div id="Json" class="container" v-for="Customer in ApiData" v-bind:key="Customer.id">
             <p><img :src="image" style="width: 500px; height:400px"/></p>
+            <p id="pris" class="btn btn-danger">Pris: {{ Customer.pris }}</p>
             <p id="id">ID: {{ Customer.id }}</p>
-            <p id="name">Name: {{ Customer.name}}</p>
+            <p id="model">Model: {{ Customer.model}}</p>
             <p id="fuel">Fuel:{{ Customer.fuel}}</p>
             <p id="miles">Miles: {{ Customer.miles}}</p>
-            <p id="pris">Pris: {{ Customer.pris }} sek</p>
             <button id="deletebtn" v-on:click="deleteBtn(Customer.id)" class="btn btn-success">Delete</button>
             
         </div>
@@ -24,6 +24,7 @@
 <script>
 import axios from "axios";
 import image from "../assets/image/car1.jpeg";
+
 
 
 export default {

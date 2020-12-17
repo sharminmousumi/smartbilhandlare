@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Contactus from "../views/Contactus.vue";
 import LagerBil from "../views/LagerBil.vue";
-import Becomecustomer from "../views/Becomecustomer.vue";
+import UpploadBil from "../views/UpploadBil.vue";
 
 
 
@@ -27,9 +27,9 @@ const routes = [
     component: LagerBil
   },
   {
-    path: "/becomecustomer",
-    name: "Becomecustomer",
-    component: Becomecustomer
+    path: "/UpploadBil",
+    name: "UpploadBil",
+    component: UpploadBil
   },
   
  

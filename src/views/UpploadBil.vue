@@ -7,7 +7,7 @@
  <div class="container my-3">
     <div class="row justify-content-around">
       <div class="col-5 rounded shadow">
-        <h1 class="py-3">Become a Customer</h1>
+        <h1 class="py-3">Uppload Bil</h1>
         <div id="signup-form">
  <div id="form">
    
@@ -24,10 +24,10 @@
       <br>
       <div class="form-group">
         
-      <label for="name">Name:</label><br>
+      <label for="name">Bil Model:</label><br>
       <div class="input-group">
         <span class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></span></span>
-      <input id="name" type="text" required v-model="name"  placeholder="Name" class="form-control"/>
+      <input id="name" type="text" required v-model="name"  placeholder="Model" class="form-control"/>
        </div> 
       
        </div>     
@@ -36,8 +36,8 @@
         
       <label for="fuel">Fuel:</label><br>
       <div class="input-group">
-        <span class="input-group-prepend"><span class="input-group-text"><i class="fa fa-envelope" aria-hidden="true"></i></span></span>
-      <input type="fuel" id="fuel" name="fuel" required v-model="fuel"  placeholder="email@example.com" class="form-control" />
+        <span class="input-group-prepend"><span class="input-group-text"><i class="fa fa-lock" aria-hidden="true"></i></span></span>
+      <input type="fuel" id="fuel" name="fuel" required v-model="fuel"  placeholder="Fuel" class="form-control" />
       </div>
       
       </div>
@@ -47,7 +47,7 @@
       <label for="pris">Pris:</label><br>
        <div class="input-group">
       <span class="input-group-prepend"><span class="input-group-text"><i class="fa fa-lock" aria-hidden="true"></i></span></span>
-      <input id="contentForm"  type="number" required v-model="pris" min=0 placeholder="pris" class="from-control"/>
+      <input id="contentForm"  type="number" required v-model="pris" min=0 placeholder="Pris" class="from-control"/>
       </div>
       
       </div>
@@ -79,15 +79,14 @@ import axios from 'axios';
  
 
 export default {
-    name: "Becomecustomer",
+    name: "UpploadBil",
      data () {
         
     return {
        name:"", 
        id:"",
-       email:"",
-       balance:"",
-       phone:"",
+       fuel:"",
+       pris:"",
        Added:false,
        options: {
                 headers: {
@@ -108,8 +107,8 @@ export default {
        
        this.Added="";
          axios
-        .post('http://localhost:3000/accounts',
-        {name:this.name,id:this.id,email:this.email,balance:this.balance,phone:this.phone})
+        .post('http://localhost:3000/details',
+        {name:this.name,id:this.id,fuel:this.fuel,pris:this.pris})
         .then(response => {(response.data)
           if(response !==null){
         this.Added=true;

@@ -6,7 +6,7 @@
     <b-navbar-nav id="Nav">
         <router-link to="/" class="nav_el">Home</router-link>
         <router-link to="/LagerBil" class="nav_el">LagerBil</router-link>
-        <router-link to="/Becomecustomer" class="nav_el">Become Customer</router-link>
+        <router-link to="/UpploadBil" class="nav_el">UpploadBil</router-link>
         <router-link to="/Contactus" class="nav_el">Contact Us</router-link>
     </b-navbar-nav>
   </b-navbar>
