@@ -4,20 +4,20 @@
 <div class="customer">
 
 </div>
- <div class="container my-3">
+ <div class="container">
     <div class="row justify-content-around">
-      <div class="col-5 rounded shadow">
-        <h1 class="py-3">Uppload Bil</h1>
+      <div class="col-4 rounded shadow">
+        <h1 class="py-1">Värdera Din Bil</h1>
         <div id="signup-form">
  <div id="form">
    
         <form v-on:submit="submitBtn" action="#" method="post">
           <div class="form-group">
            
-      <label for="id">Id:</label><br>
+      <label for="id">Registration No:</label><br>
        <div class="input-group">
       <span class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></span></span>
-      <input id="name" v-model="id" required class="form-control" placeholder="Id">
+      <input id="name" v-model="id" required class="form-control" placeholder="Registration No">
       </div>
       
   </div>
@@ -57,13 +57,13 @@
       <label for="miles">Miles:</label><br>
        <div class="input-group">
       <span class="input-group-prepend"><span class="input-group-text"><i class="fa fa-lock" aria-hidden="true"></i></span></span>
-      <input id="contentForm"  type="number" required v-model="phone"  placeholder="miles" class="from-control"/>
+      <input id="contentForm"  type="number" required v-model="phone"  placeholder="Miles" class="from-control"/>
       </div>
       
       </div>
       <br>
       <div class="form-group">
-      <button id="submitbtn"  type='submit' class="btn btn-block btn-lg btn-primary">Submit</button><h2 v-if="Added">Added  to the list!</h2>
+      <button id="submitbtn"  type='submit' class="btn-block btn-lg btn-primary">Submit</button><h2 v-if="Added">Added  to the list!</h2>
       </div>
     </form>
     
@@ -79,7 +79,7 @@ import axios from 'axios';
  
 
 export default {
-    name: "UpploadBil",
+    name: "VärderaDinBil",
      data () {
         
     return {
@@ -128,12 +128,16 @@ export default {
 }
 </script>
 <style lang="scss">
-.pajbank{
-  
-  font-family: "Source Sans Pro";
-  font-style: normal;
-  font-weight: bold;
+.form-group>label{
+  margin-bottom:-20px;
 }
+.py-1{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
 
 
 

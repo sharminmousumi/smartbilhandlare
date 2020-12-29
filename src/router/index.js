@@ -1,9 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Contactus from "../views/Contactus.vue";
+import KontaktaOss from "../views/KontaktaOss.vue";
 import LagerBil from "../views/LagerBil.vue";
-import UpploadBil from "../views/UpploadBil.vue";
+import VärderaDinBil from "../views/VärderaDinBil.vue";
 
 
 
@@ -16,9 +16,9 @@ const routes = [
     component: Home
   },
   {
-    path: "/contactus",
-    name: "Contactus",
-    component: Contactus
+    path: "/KontaktaOss",
+    name: "KontaktaOss",
+    component: KontaktaOss
     
   },
   {
@@ -27,9 +27,9 @@ const routes = [
     component: LagerBil
   },
   {
-    path: "/UpploadBil",
-    name: "UpploadBil",
-    component: UpploadBil
+    path: "/VärderaDinBil",
+    name: "VärderaDinBil",
+    component: VärderaDinBil
   },
   
  

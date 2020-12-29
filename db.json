@@ -1,80 +1,80 @@
 {
   "details": [
     {
-      "Model": "Audi A6 Avant 2.0 TDI ultra S",
+      "model": "Audi A6 Avant 2.0 TDI ultra S",
       "id": "1",
       "fuel": "Diesel",
       "pris": "154,900 SEK",
       "miles": "8,900 Mil"
     },
     {
-      "Model": "Audi A6 Avant 3.0 TDI V6 quatt",
+      "model": "Audi A6 Avant 3.0 TDI V6 quatt",
       "id": "2",
       "fuel": "Diesel",
       "pris": "274,900 SEK",
       "miles": "5,000 Mil"
     },
     {
-      "Model": "Volvo S60 Cross Country D4 AWD",
+      "model": "Volvo S60 Cross Country D4 AWD",
       "id": "3",
       "fuel": "Diesel",
       "pris": "234,900 SEK",
       "miles": "5,900 Mil"
     },
     {
-      "Model": "Audi A6 Avant 3.0 TDI V6 quatt",
+      "model": "Audi A6 Avant 3.0 TDI V6 quatt",
       "id": "4",
       "fuel": "Hybrid",
       "pris": "240,970 SEK",
       "miles": "8,000 Mil"
     },
     {
-      "Model": "BMW 520 d Touring Steptronic 184hk",
+      "model": "BMW 520 d Touring Steptronic 184hk",
       "id": "5",
       "fuel": "Bensin",
       "pris": "254,900 SEK",
       "miles": "8,900 Mil"
     },
     {
-      "Model": "BMW 520 d Touring Steptronic S",
+      "model": "BMW 520 d Touring Steptronic S",
       "id": "6",
       "fuel": "Diesel",
       "pris": "300,900 SEK",
       "miles": "10,900 Mil"
     },
     {
-      "Model": "Citroën C3 1.2 VTi Euro 6 82hk",
+      "model": "Citroën C3 1.2 VTi Euro 6 82hk",
       "id": "7",
       "fuel": "Bensin",
       "pris": "220,900 SEK",
       "miles": "12,900 Mil"
     },
     {
-      "Model": "Volvo XC60 D4 AWD Geartronic S",
+      "model": "Volvo XC60 D4 AWD Geartronic S",
       "id": "8",
       "fuel": "Diesel",
       "pris": "154,900 SEK",
       "miles": "10,900 Mil"
     },
     {
-      "Model": "Mercedes-Benz CLA 200 Euro 6 156hk",
+      "model": "Mercedes-Benz CLA 200 Euro 6 156hk",
       "id": "9",
       "fuel": "Hybrid",
       "pris": "260,900 SEK",
       "miles": "6,900 Mil"
     },
     {
-      "Model": "Mercedes-Benz E 300 de T PLUG-...",
+      "model": "Mercedes-Benz E 300 de T PLUG-...",
       "id": "10",
       "fuel": "Diesel",
       "pris": "400,900 SEK",
       "miles": "9,900 Mil"
     },
     {
-      "Model": "Volvo A6",
+      "model": "Volvo A6",
       "id": "11",
       "fuel": "Hybrid",
-      "pris": "1234567",
+      "pris": "123,456 SEK",
       "miles": "9,900 Mil"
     }
   ]

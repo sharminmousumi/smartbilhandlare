@@ -99,22 +99,17 @@ export default {
   font-size: 30px;
   text-align: center;
 }
-#Json{
-    
-    font-family:  'Times New Roman', serif;
-    
+#Json >p{
+    font-family: Arial, Helvetica, sans-serif;
+     font-weight: bold;
     margin-bottom: 10px;    
     color: black;
+
     
 }
-
-.pajbank{
-  
-  font-family: "Source Sans Pro";
-  font-style: normal;
-  font-weight: bold;
+#pris{
+    margin-left: 290px;
 }
-
 #deletebtn{
     width: 200px;
 }
@@ -122,5 +117,6 @@ export default {
     text-align: center;
     
 }
+
 
 </style>

@@ -6,8 +6,8 @@
     <b-navbar-nav id="Nav">
         <router-link to="/" class="nav_el">Home</router-link>
         <router-link to="/LagerBil" class="nav_el">LagerBil</router-link>
-        <router-link to="/UpploadBil" class="nav_el">UpploadBil</router-link>
-        <router-link to="/Contactus" class="nav_el">Contact Us</router-link>
+        <router-link to="/VärderaDinBil" class="nav_el">VärderaDinBil</router-link>
+        <router-link to="/KontaktaOss" class="nav_el">Kontakta Oss</router-link>
     </b-navbar-nav>
   </b-navbar>
  
@@ -27,6 +27,8 @@ export default {
   font-size: 20px;
   padding: 10px;
   display:inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
  
 }
 .nav_el:hover{
@@ -35,21 +37,21 @@ export default {
 
 
 #Nav{
+  
     margin-left: 50px;
     
     
 }
 #daj{
-  text-decoration: none;
   color: white;
   font-size: 40px;
   padding: 10px;
-  display:inline-block;
-  font-family: Arial, Helvetica, sans-serif;
 
                     
 }
-
+#top{
+  margin-bottom: 10px;
+}
 
 
 
