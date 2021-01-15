@@ -69,13 +69,6 @@
       "fuel": "Diesel",
       "pris": "400,900 SEK",
       "miles": "9,900 Mil"
-    },
-    {
-      "model": "Volvo A6",
-      "id": "11",
-      "fuel": "Hybrid",
-      "pris": "123,456 SEK",
-      "miles": "9,900 Mil"
     }
   ]
 }
