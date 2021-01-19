@@ -24,9 +24,6 @@
 <script>
 import axios from "axios";
 import image from "../assets/image/car1.jpeg";
-
-
-
 export default {
     name: "LagerBil",
     data() {
@@ -36,7 +33,6 @@ export default {
             enable:false,
              image: image,
             ApiData: null,
-
             options: {
                 headers: {
                     "Content-Type": "application/json",
@@ -58,7 +54,7 @@ export default {
     methods: { 
         getData() {
             axios
-                .get('http://localhost:3000/details')
+                .get('/LagerBil')
                 .then(response => (this.ApiData = response.data))
                 .catch(error => {
                     console.log(error)
@@ -104,7 +100,6 @@ export default {
      font-weight: bold;
     margin-bottom: 10px;    
     color: black;
-
     
 }
 #pris{
@@ -117,6 +112,4 @@ export default {
     text-align: center;
     
 }
-
-
 </style>
