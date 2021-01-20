@@ -48,7 +48,8 @@
     "sass": "^1.27.0",
     "sass-loader": "^10.0.4",
     "sass-loaderue add unit-jest": "^10.0.3",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "xxxxx": "^1.0.3"
   },
   "eslintConfig": {
     "root": true,

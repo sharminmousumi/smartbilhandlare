@@ -3,9 +3,9 @@ const bodyParser = require('body-parser')
 
 const app = express()
 
-const port = process.env.PORT || 1356;
+const port = process.env.PORT || 1355;
 
-const { getBil } = require('./database.js');
+const { getBil,getAllBil,deleteBil } = require('./database.js');
 
 //MIDDLEWARE
 app.use((req, res, next) => {
@@ -26,14 +26,29 @@ app.get("/", (req, res) => {
 });
 
 //GET 
-app.get('/LagerBil', (req, res) => {
-	getBil(dataOrError => {
-		res.send(dataOrError)
-	});
 
+app.get('/LagerBil', (req,res)=>{
+    getAllBil(dataOrError =>{
+      res.send(dataOrError)
+    })
+})
+
+app.get('/LagerBil', (req,res)=>{
+
+  getBil(req.query.id, dataOrError => {
+    res.send(dataOrError)
+  } )
+ 
 })
 
 
+app.delete('/deleteBil/:id', (req, res) => {
+	console.log('GET / deleteBil')
+	deleteBil(req.params.id, dataOrError => {
+		console.log(req.params.id)
+		res.send(dataOrError)
+	})
+})
 
 //START WEB SERVER
 app.listen(port, () => {

@@ -64,10 +64,11 @@ export default {
         },
         deleteBtn(id){
        axios
-      .delete('http://localhost:3000/details/'+id)
+      .delete('/deleteBil'+id)
       .then(response => {(this.ApiData = response.data)
       if(response!==null){
         this.getData();
+        console.log(this.ApiData);
       }
       })
       .catch(error => {
