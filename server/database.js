@@ -38,7 +38,35 @@ function getBil(id, callback){
 function getAllBil(callback) {
 	get({}, callback)
 }
-
+function addBil(requestBody, callback) {
+	const bil = requestBody
+	MongoClient.connect(
+		uri,
+		{ useUnifiedTopology: true },
+		async (error, client) => {
+			if (error) {
+				console.log("Error add-hamster", error.message)
+				callback('"ERROR!! Could not connect add-hamster"');
+				return;
+			}
+			const col = client.db(dbName).collection(collectionName);
+			try {
+				const result = await col.insertOne(bil);
+				callback({
+					result: result.result,
+					ops: result.ops
+				})
+			}
+			catch (error) {
+				console.error(' error: ' + error.message);
+				callback('"ERROR!! Query error"');
+			}
+			finally {
+				client.close();
+			}
+		}
+	)
+}
 //Delete object
 function deleteBil(id, callback){
 	MongoClient.connect(uri, {useUnifiedTopology:true},
@@ -47,7 +75,7 @@ function deleteBil(id, callback){
                 callback("'Error! Couldnt connect'");
                 return;
             }
-            const col = client.db(dbName).collection(dbCollection);
+			const col = client.db(dbName).collection(collectionName);
             try {
                 const result = await col.deleteOne({_id: new ObjectID(id)});
                 callback({
@@ -55,7 +83,7 @@ function deleteBil(id, callback){
                     ops: result.ops
                 })
             } catch(error){
-                console.error('Couldnt delete hamster: ' + error.message);
+                console.error('Couldnt delete: ' + error.message);
                 callback('error');
             } finally{
                 client.close();
@@ -65,5 +93,5 @@ function deleteBil(id, callback){
 }
 
 module.exports = {
-	getBil,getAllBil, deleteBil
+	getBil,getAllBil, deleteBil,addBil
 }

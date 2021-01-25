@@ -9,7 +9,6 @@
         <div id="Json" class="container" v-for="Customer in ApiData" v-bind:key="Customer.id">
             <p><img :src="image" style="width: 500px; height:400px"/></p>
             <p id="pris" class="btn btn-danger">Pris: {{ Customer.pris }}</p>
-            <p id="id">ID: {{ Customer.id }}</p>
             <p id="model">Model: {{ Customer.model}}</p>
             <p id="fuel">Fuel:{{ Customer.fuel}}</p>
             <p id="miles">Miles: {{ Customer.miles}}</p>
@@ -64,7 +63,7 @@ export default {
         },
         deleteBtn(id){
        axios
-      .delete('/deleteBil'+id)
+      .delete('/deleteBil',{delete:'',id: id})
       .then(response => {(this.ApiData = response.data)
       if(response!==null){
         this.getData();

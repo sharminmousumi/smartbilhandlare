@@ -3,9 +3,9 @@ const bodyParser = require('body-parser')
 
 const app = express()
 
-const port = process.env.PORT || 1355;
+const port = process.env.PORT || 1357;
 
-const { getBil,getAllBil,deleteBil } = require('./database.js');
+const { getBil,getAllBil,addBil,deleteBil } = require('./database.js');
 
 //MIDDLEWARE
 app.use((req, res, next) => {
@@ -40,6 +40,15 @@ app.get('/LagerBil', (req,res)=>{
   } )
  
 })
+app.post('/upload', (req, res) => {
+	addBil(req.body, dataOrError => {
+		res.send(dataOrError)
+	})
+	console.log("Detta är req.body", req.body)
+	// res.send("/upload funkar!")
+
+})
+
 
 
 app.delete('/deleteBil/:id', (req, res) => {
