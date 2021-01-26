@@ -40,6 +40,7 @@ app.get('/LagerBil', (req,res)=>{
   } )
  
 })
+//upload new bil
 app.post('/upload', (req, res) => {
 	addBil(req.body, dataOrError => {
 		res.send(dataOrError)

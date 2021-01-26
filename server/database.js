@@ -38,6 +38,8 @@ function getBil(id, callback){
 function getAllBil(callback) {
 	get({}, callback)
 }
+
+// add new bil
 function addBil(requestBody, callback) {
 	const bil = requestBody
 	MongoClient.connect(
@@ -50,6 +52,7 @@ function addBil(requestBody, callback) {
 				return;
 			}
 			const col = client.db(dbName).collection(collectionName);
+			
 			try {
 				const result = await col.insertOne(bil);
 				callback({
