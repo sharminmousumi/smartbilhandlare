@@ -9,54 +9,54 @@
             <form @submit="submitForm">
                 <div class="form-group">
                     <label>Model</label>
-                    <input v-model="hamster.model" type="text" required />
+                    <input v-model="bil.model" type="text" required />
                     <div
                         v-if="
-                            !$v.hamster.model.required && $v.hamster.model.$dirty
+                            !$v.bil.model.required && $v.bil.model.$dirty
                         "
                         class="error-class"
                     >
                         Field is required
                     </div>
-                    <div v-if="!$v.hamster.model.minLength" class="error-class">
+                    <div v-if="!$v.bil.model.minLength" class="error-class">
                         At least 3 characters
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label>Pris</label>
-                    <input id="pris" v-model="hamster.pris" type="number" required />
+                    <input id="pris" v-model="bil.pris" type="number" required />
                     
                 </div>
 
                 <div class="form-group">
                     <label>Miles</label>
-                    <input id ="miles" v-model="hamster.miles" type="number" required />
+                    <input id ="miles" v-model="bil.miles" type="number" required />
                     
                 </div>
 
                 <div class="form-group">
                     <label>Fuel</label>
-                    <input  id="fuel" v-model="hamster.fuel" type="text" required />
+                    <input  id="fuel" v-model="bil.fuel" type="text" required />
                     <div
                         v-if="
-                            !$v.hamster.fuel.required &&
-                            $v.hamster.fuel.$dirty
+                            !$v.bil.fuel.required &&
+                            $v.bil.fuel.$dirty
                         "
                         class="error-class"
                     >
                         Field is required
                     </div >
-                    <div v-if="!$v.hamster.fuel.minLength" class="error-class">
+                    <div v-if="!$v.bil.fuel.minLength" class="error-class">
                         At least 3 characters
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label>Img url</label>
-                    <input id="img" v-model="hamster.imgName" type="url" required />
+                    <input id="img" v-model="bil.imgName" type="url" required />
                     <div
-                        v-if="!$v.hamster.imgName.required && $v.hamster.imgName.$dirty"
+                        v-if="!$v.bil.imgName.required && $v.bil.imgName.$dirty"
                         class="error-class"
                     >
                         Field is required
@@ -74,7 +74,7 @@
 
                 <div v-show="isLoading">Loading...</div>
                 <div v-show="success">
-                    Your hamster is now ready for battle!
+                    Din bil har sparat
                 </div>
             </form>
         </div>
@@ -90,7 +90,7 @@ import { required, minLength, url } from "vuelidate/lib/validators";
 export default {
     data() {
         return {
-            hamster: {
+            bil: {
                 model: "",
                 pris: 0,
                 miles: 0,
@@ -107,7 +107,7 @@ export default {
         };
     },
     validations: {
-        hamster: {
+        bil: {
             model: {
                 required,
                 minLength: minLength(3),
@@ -139,17 +139,17 @@ export default {
                 this.isLoading = true;
                 
                 axios
-                    .post("/upload", this.hamster, this.options)
+                    .post("/upload", this.bil, this.options)
                     .then((response) => {
                         console.log("Response", response);
                         if (response.status === 200) {
                             this.isLoading = false;
                             this.success = true;
-                            this.hamster.model = "";
-                            this.hamster.pris = 0;
-                            this.hamster.miles = "";
-                            this.hamster.fuel = "";
-                            this.hamster.imgName= "";
+                            this.bil.model = "";
+                            this.bil.pris = 0;
+                            this.bil.miles = "";
+                            this.bil.fuel = "";
+                            this.bil.imgName= "";
                             //Resets the form
                             this.$v.$reset();
                         }
