@@ -3,7 +3,7 @@
     <div class="container">
     <div class="row justify-content-around">
       <div class="col-6 rounded shadow">
-        <h2 class="py-1">Upload a new Bil!</h2>
+        <h2 class="py-1">Ladda upp en ny bil! </h2>
         
         <div class="form">
             <form @submit="submitForm">
@@ -172,7 +172,7 @@ export default {
 }
 #submitbtn{
   width: 150px;
-  margin-bottom: 30px;
+  margin-bottom: 70px;
   margin-left: 50px;
 }
 .form-group >input{

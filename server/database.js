@@ -78,7 +78,7 @@ function deleteBil(id, callback){
                 callback("'Error! Couldnt connect'");
                 return;
             }
-			const col = client.db(dbName).collection(collectionName);
+            const col = client.db(dbName).collection(collectionName);
             try {
                 const result = await col.deleteOne({_id: new ObjectID(id)});
                 callback({
@@ -86,7 +86,7 @@ function deleteBil(id, callback){
                     ops: result.ops
                 })
             } catch(error){
-                console.error('Couldnt delete: ' + error.message);
+                console.error('Couldnt delete bil: ' + error.message);
                 callback('error');
             } finally{
                 client.close();
@@ -94,7 +94,6 @@ function deleteBil(id, callback){
         }
     )
 }
-
 module.exports = {
 	getBil,getAllBil, deleteBil,addBil
 }

@@ -51,8 +51,9 @@ app.post('/upload', (req, res) => {
 })
 
 
+// DELETE
 
-app.delete('/deleteBil/:id', (req, res) => {
+app.delete('/bil/:id', (req, res) => {
 	console.log('GET / deleteBil')
 	deleteBil(req.params.id, dataOrError => {
 		console.log(req.params.id)

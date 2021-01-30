@@ -4,8 +4,8 @@
     variant="info" id="top">
     <b-navbar-brand id="daj"><img class="mr-3" :src="require('../assets/image/logo.png')" height="40"/> </b-navbar-brand>
     <b-navbar-nav id="Nav">
-        <router-link to="/" class="nav_el">Home</router-link>
-        <router-link to="/LagerBil" class="nav_el">LagerBil</router-link>
+        <router-link to="/" class="nav_el">Hem</router-link>
+        <router-link to="/BilLager" class="nav_el">BilLager</router-link>
         <router-link to="/VärderaDinBil" class="nav_el">VärderaDinBil</router-link>
         <router-link to="/KontaktaOss" class="nav_el">Kontakta Oss</router-link>
     </b-navbar-nav>

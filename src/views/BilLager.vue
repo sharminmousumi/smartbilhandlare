@@ -1,18 +1,22 @@
 <template>
     <div class="container">
-        <div id="navbar" >
-            
-    
-        </div>
-        
+              
        <div class="grid-container">
-        <div id="Json" class="container" v-for="Customer in ApiData" v-bind:key="Customer.id">
-            <p><img :src="image" style="width: 500px; height:400px"/></p>
+        <div id="Json" v-for="Customer in ApiData" v-bind:key="Customer._id">
+            
+            <p id="imgName">
+                <img
+                    :src="getImgUrl(Customer.imgName)"
+                    v-bind:alt="Customer.imgName"
+                    style="width: 400px; height: 300px"
+                    v-on:click="showResult = true"
+                />
+            </p>
             <p id="pris" class="btn btn-danger">Pris: {{ Customer.pris }}</p>
             <p id="model">Model: {{ Customer.model}}</p>
             <p id="fuel">Fuel:{{ Customer.fuel}}</p>
             <p id="miles">Miles: {{ Customer.miles}}</p>
-            <button id="deletebtn" v-on:click="deleteBtn(Customer.id)" class="btn btn-success">Delete</button>
+            <button id="deletebtn" v-on:click="deleteBtn(Customer._id)" class="btn btn-success">Delete</button>
             
         </div>
         </div>
@@ -22,15 +26,15 @@
 
 <script>
 import axios from "axios";
-import image from "../assets/image/car1.jpeg";
+
 export default {
-    name: "LagerBil",
+    name: "BilLager",
     data() {
         return {
             
             ifCustomer:false,
             enable:false,
-             image: image,
+            
             ApiData: null,
             options: {
                 headers: {
@@ -48,9 +52,16 @@ export default {
     created(){
         this.getData();
     },
+    watch: {
+        // call again the method if the route changes
+        $route: "getData",
+    },
   
   
     methods: { 
+        getImgUrl(pic) {
+            return require("../assets/image/" + pic);
+        },
         getData() {
             axios
                 .get('/LagerBil')
@@ -61,9 +72,12 @@ export default {
                 })
       
         },
-        deleteBtn(id){
+
+        //delete button
+
+    deleteBtn(id){
        axios
-      .delete('/deleteBil',{delete:'',id: id})
+      .delete('/bil/'+id)
       .then(response => {(this.ApiData = response.data)
       if(response!==null){
         this.getData();
@@ -107,9 +121,10 @@ export default {
 }
 #deletebtn{
     width: 200px;
+    margin-bottom: 10px;
 }
-#navbar > h1{
-    text-align: center;
-    
+#Json{
+    margin-left: 60px;
 }
+
 </style>
