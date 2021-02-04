@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Fuel</label>
+                    <label>Bränsle </label>
                     <input  id="fuel" v-model="bil.fuel" type="text" required />
                     <div
                         v-if="
@@ -88,6 +88,7 @@
 import axios from "axios";
 import { required, minLength, url } from "vuelidate/lib/validators";
 export default {
+    name: "Värderadinbil",
     data() {
         return {
             bil: {
@@ -183,7 +184,7 @@ export default {
   margin-left: 49px;
 }
 .form-group > #fuel{
-  margin-left: 48px;
+  margin-left: 25px;
 }
 .form-group > #miles{
   margin-left: 42px;

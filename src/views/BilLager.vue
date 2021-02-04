@@ -14,7 +14,7 @@
             </p>
             <p id="pris" class="btn btn-danger">Pris: {{ Customer.pris }}</p>
             <p id="model">Model: {{ Customer.model}}</p>
-            <p id="fuel">Fuel:{{ Customer.fuel}}</p>
+            <p id="fuel">Bränsle :{{ Customer.fuel}}</p>
             <p id="miles">Miles: {{ Customer.miles}}</p>
             <button id="deletebtn" v-on:click="deleteBtn(Customer._id)" class="btn btn-success">Delete</button>
             
@@ -28,7 +28,7 @@
 import axios from "axios";
 
 export default {
-    name: "BilLager",
+    name: "Billager",
     data() {
         return {
             

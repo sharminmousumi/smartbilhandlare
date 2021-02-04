@@ -1,9 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Hem from "../views/Hem.vue";
-import KontaktaOss from "../views/KontaktaOss.vue";
-import BilLager from "../views/BilLager.vue";
-import VärderaDinBil from "../views/VärderaDinBil.vue";
+import Kontaktaoss from "../views/Kontaktaoss.vue";
+import Billager from "../views/Billager.vue";
+import Värderadinbil from "../views/Värderadinbil.vue";
 
 
 
@@ -16,20 +16,20 @@ const routes = [
     component: Hem
   },
   {
-    path: "/KontaktaOss",
-    name: "KontaktaOss",
-    component: KontaktaOss
+    path: "/Kontaktaoss",
+    name: "Kontaktaoss",
+    component: Kontaktaoss
     
   },
   {
-    path: "/BilLager",
-    name: "BilLager",
-    component: BilLager
+    path: "/Billager",
+    name: "Billager",
+    component: Billager
   },
   {
-    path: "/VärderaDinBil",
-    name: "VärderaDinBil",
-    component: VärderaDinBil
+    path: "/Värderadinbil",
+    name: "Värderadinbil",
+    component: Värderadinbil
   },
   
  

@@ -4,7 +4,7 @@
   
   
   <section class="footer-social-section flex-rw">
-      <span class="footer-social-overlap footer-social-connect">Connect with US </span>
+      <span class="footer-social-overlap footer-social-connect">Anslut till oss </span>
       <span class="footer-social-overlap footer-social-icons-wrapper">
       <a href="https://www.pinterest.com/paviliongift/" class="generic-anchor" target="_blank" title="Pinterest" itemprop="significantLink"><i class="fa fa-pinterest"></i></a>
       <a href="https://www.facebook.com/paviliongift" class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i></a>
@@ -19,7 +19,7 @@
 
     </div>
     <div class="footer-bottom-wrapper">
-    <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Terms</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Privacy</a>
+    <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Villkor</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Integritet </a>
       </div>
   </section>
 </footer>
@@ -39,11 +39,8 @@ html, body {
   height: 100%
 }
 body {
-	font: 11px "Open Sans", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	margin: auto;
-  display: flex;
   flex-flow: column nowrap;
   justify-content: space-between
 }
@@ -51,7 +48,7 @@ ul {
   list-style: none
 }
 a {
-  text-decoration: none
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .flex-rw {
@@ -62,7 +59,6 @@ footer {
   background-color:#17a2b8;
   margin-top: auto;
   width: 100%;
-  
 }
 .footer-social-section {
   width: 100%;
@@ -76,7 +72,7 @@ footer {
 .footer-social-connect {
   display: flex;
   align-items: center;
-  font: 3.5em "Oswald", sans-serif;
+  font: 2.8em "Oswald", sans-serif;
   color: #fff
 }
 
@@ -97,10 +93,10 @@ footer {
 .footer-bottom-wrapper {
   font-size: 1.5em;
   color:gray;
+
 }
 .footer-address {
   display: inline;
-  font-style: normal
 }
 @media only screen and (max-width: 768px) {
   .footer-list-header {
@@ -159,7 +155,7 @@ footer {
   .footer-bottom-wrapper {
     text-align: center;
     width: 100%;
-    margin-top: 10px
+    margin-top: 10px;
   }
 }
 @media only screen and (max-width: 480px) {
