@@ -2,7 +2,7 @@
     <div class="container">
               
        <div class="grid-container">
-        <div id="Json" v-for="Customer in ApiData" v-bind:key="Customer._id">
+        <div id="Json" v-for="Customer in ApiData" v-bind:key="Customer.id">
             
             <p id="imgName">
                 <img
@@ -16,7 +16,7 @@
             <p id="model">Model: {{ Customer.model}}</p>
             <p id="fuel">Bränsle :{{ Customer.fuel}}</p>
             <p id="miles">Miles: {{ Customer.miles}}</p>
-            <button id="deletebtn" v-on:click="deleteBtn(Customer._id)" class="btn btn-success">Delete</button>
+            <button id="deletebtn" v-on:click="deleteBtn(Customer.id)" class="btn btn-success">Delete</button>
             
         </div>
         </div>

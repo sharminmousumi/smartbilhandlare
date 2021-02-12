@@ -1,7 +1,7 @@
 <template>
  <div>
      
-<b-navbar-brand id="daj"><img class="mr-3" :src="require('../assets/image/walpapper.jpg')"  height="500" width="1300"/></b-navbar-brand>
+<b-navbar-brand id="daj"><img class="mr-3" :src="require('../assets/image/walpapper.jpg')"  height="500" width="1263"/></b-navbar-brand>
 
 <div class="home">
  
