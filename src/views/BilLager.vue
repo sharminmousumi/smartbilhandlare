@@ -64,7 +64,7 @@ export default {
         },
         getData() {
             axios
-                .get('/LagerBil')
+                .get('/api/LagerBil')
                 .then(response => (this.ApiData = response.data))
                 .catch(error => {
                     console.log(error)
@@ -78,7 +78,7 @@ export default {
     deleteBtn(id){
         
        axios
-      .delete('/bil/'+id)
+      .delete('/api/bil/'+id)
       .then(response => {console.log(response);
       this.getData();
       

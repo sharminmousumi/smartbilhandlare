@@ -140,7 +140,7 @@ export default {
                 this.isLoading = true;
                 
                 axios
-                    .post("/upload", this.bil, this.options)
+                    .post("/api/upload", this.bil, this.options)
                     .then((response) => {
                         console.log("Response", response);
                         if (response.status === 200) {

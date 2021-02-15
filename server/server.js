@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 
 const app = express()
 
-const port = process.env.PORT || 1357;
+const port = process.env.PORT || 1337;
 
 const { getBil,getAllBil,addBil,deleteBil } = require('./database.js');
 
@@ -27,13 +27,13 @@ app.get("/", (req, res) => {
 
 //GET 
 
-app.get('/LagerBil', (req,res)=>{
+app.get('/api/LagerBil', (req,res)=>{
     getAllBil(dataOrError =>{
       res.send(dataOrError)
     })
 })
 
-app.get('/LagerBil', (req,res)=>{
+app.get('/api/LagerBil', (req,res)=>{
 
   getBil(req.query.id, dataOrError => {
     res.send(dataOrError)
@@ -41,7 +41,7 @@ app.get('/LagerBil', (req,res)=>{
  
 })
 //upload new bil
-app.post('/upload', (req, res) => {
+app.post('/api/upload', (req, res) => {
 	addBil(req.body, dataOrError => {
 		res.send(dataOrError)
 	})
@@ -53,7 +53,7 @@ app.post('/upload', (req, res) => {
 
 // DELETE Bil
 
-app.delete('/bil/:id', (req, res) => {
+app.delete('/api/bil/:id', (req, res) => {
 	console.log('GET / bil')
 	deleteBil(req.params.id, dataOrError => {
 		console.log(req.params.id)
