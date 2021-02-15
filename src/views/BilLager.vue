@@ -8,7 +8,6 @@
                 <img
                     :src="getImgUrl(Customer.imgName)"
                     v-bind:alt="Customer.imgName"
-                    style="width: 400px; height: 300px"
                     v-on:click="showResult = true"
                 />
             </p>
@@ -16,7 +15,8 @@
             <p id="model">Model: {{ Customer.model}}</p>
             <p id="fuel">Bränsle :{{ Customer.fuel}}</p>
             <p id="miles">Miles: {{ Customer.miles}}</p>
-            <button id="deletebtn" v-on:click="deleteBtn(Customer.id)" class="btn btn-success">Delete</button>
+
+            <button id="deletebtn" v-on:click="deleteBtn(Customer._id)" class="btn btn-success">Delete</button>
             
         </div>
         </div>
@@ -76,13 +76,13 @@ export default {
         //delete button
 
     deleteBtn(id){
+        
        axios
       .delete('/bil/'+id)
-      .then(response => {(this.ApiData = response.data)
-      if(response!==null){
-        this.getData();
-        console.log(this.ApiData);
-      }
+      .then(response => {console.log(response);
+      this.getData();
+      
+      
       })
       .catch(error => {
         console.log(error)
@@ -99,8 +99,8 @@ export default {
 <style lang="scss">
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto;
-  padding: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5px;
 }
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
@@ -117,7 +117,7 @@ export default {
     
 }
 #pris{
-    margin-left: 290px;
+    margin-left: 130px;
 }
 #deletebtn{
     width: 200px;
@@ -125,6 +125,27 @@ export default {
 }
 #Json{
     margin-left: 60px;
+}
+/* Bigger than Phones(laptop / desktop) */
+@media only screen and (min-width: 970px) {
+  .grid-container  {
+    grid-template-columns: repeat(2, 1fr);
+  }
+ 
+}
+
+@media (min-width: 480px) and (max-width: 970px) {
+  .grid-container  {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+}
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    
+  }
+
 }
 
 </style>

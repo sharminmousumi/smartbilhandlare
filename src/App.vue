@@ -28,6 +28,7 @@ export default {
 #main_content {
     grid-column-start: 2;
     grid-column-end: 6;
+    
 }
 
 </style>
