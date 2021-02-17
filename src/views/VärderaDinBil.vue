@@ -61,7 +61,6 @@
                     >
                         Field is required
                     </div>
-                    
                 </div>
 
                 <button

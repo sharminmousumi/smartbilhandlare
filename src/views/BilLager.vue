@@ -8,7 +8,7 @@
                 <img
                     :src="getImgUrl(Customer.imgName)"
                     v-bind:alt="Customer.imgName"
-                    v-on:click="showResult = true"
+                    v-on:click="showResult = true" width="460" height="350"
                 />
             </p>
             <p id="pris" class="btn btn-danger">Pris: {{ Customer.pris }}</p>
@@ -73,7 +73,7 @@ export default {
       
         },
 
-        //delete button
+        //Delete button
 
     deleteBtn(id){
         
@@ -122,6 +122,7 @@ export default {
 #deletebtn{
     width: 200px;
     margin-bottom: 10px;
+   
 }
 #Json{
     margin-left: 60px;
@@ -132,12 +133,20 @@ export default {
     grid-template-columns: repeat(2, 1fr);
   }
  
+ 
 }
 
 @media (min-width: 480px) and (max-width: 970px) {
   .grid-container  {
     grid-template-columns: repeat(1, 1fr);
   }
+    #Json{
+    margin-left: -10px;
+    margin-right: 50px;
+}
+#pris{
+    margin-left: 0px;
+}
   
 }
 @media (max-width: 480px) {
@@ -145,7 +154,13 @@ export default {
     grid-template-columns: 1fr;
     
   }
-
+  #Json{
+    margin-left: -10px;
+    margin-right: 50px;
+}
+#pris{
+    margin-left: 0px;
+}
 }
 
 </style>
